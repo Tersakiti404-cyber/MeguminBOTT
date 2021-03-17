@@ -107,9 +107,16 @@ const { wait, simih, getBuffer, h2k, banner, generateMessageID, getGroupAdmins, 
 
 const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n'
-            + 'FN:Farhan\n'
-            + 'ORG:Owner FXC7;\n'
-            + 'TEL;type=CELL;type=VOICE;waid=628311800241:+62 831-1800-241\n'
+            + 'FN:Fajar Alfarizi\n'
+            + 'ORG:Owner 𝙼𝚎𝚐𝚞𝚖𝚒𝚗 𝙱𝙾𝚃;\n'
+            + 'TEL;type=CELL;type=VOICE;waid=6281333782061:+62 813-3378-2061\n'
+            + 'END:VCARD'
+       
+const vcard1 = 'BEGIN:VCARD\n'
+            + 'VERSION:3.0\n'
+            + 'FN:Debby Cans\n'
+            + 'ORG:Co Owner 𝙼𝚎𝚐𝚞𝚖𝚒𝚗 𝙱𝙾𝚃;\n'
+            + 'TEL;type=CELL;type=VOICE;waid=6285277188863:+62 852-7718-8863\n'
             + 'END:VCARD'
 
 function kyun(seconds){
@@ -1235,9 +1242,13 @@ return new Promise(resolve => setTimeout(resolve, ms));
 				await limitAdd(sender) 	
 			break 
 				case 'owner':
-				frhan.sendMessage(from, {displayname: "jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
-				reply('wa.me/628311800241')
-				break
+                 frhan.sendMessage(from, {displayname: "jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
+                 frhan.sendMessage(from, '*_ꜱᴀᴠᴇ ʏᴀ ɴᴛᴀʀ ꜱᴀᴠᴇ ʙᴀᴄᴋ :)_*',text, { quoted: mek} )
+                 break
+                 case 'coowner':
+                 frhan.sendMessage(from, {displayname: "jeff", vcard: vcard1}, MessageType.contact, { quoted: mek})
+                 frhan.sendMessage(from, '*_ɪᴛᴜ ᴘᴀᴄᴀʀᴋᴜ ᴇʜ ᴍᴀᴋꜱᴜᴅɴʏᴀ ᴏᴡɴᴇʀᴋᴜ >-<_*',text, { quoted: mek} )
+                 break
 				
 			case 'fitnah':
 				if (isBanned) return reply(mess.only.benned)    
@@ -3143,7 +3154,7 @@ return new Promise(resolve => setTimeout(resolve, ms));
 						teks += `╠➥ @${mem.jid.split('@')[0]} wa.me/${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					mentions(`╔═══✪ Tag By *${pushname2}* ✪══`+ teks +'╚═══〘 FXC7 BOT 〙═══', members_id, true)
+					mentions(`╔═══✪ Tag By *${pushname2}* ✪══`+ teks +'╚═══〘 𝐌𝐞𝐠𝐮𝐦𝐢𝐧𝐁𝐎𝐓 〙═══', members_id, true)
 					break
 			    case 'mentionall':
 			    if (isBanned) return reply(mess.only.benned)    
@@ -3157,7 +3168,7 @@ return new Promise(resolve => setTimeout(resolve, ms));
 						teks += `╠➥ @${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					mentions(`╔══〘  *${body.slice(12)}*  〙✪══`+teks+'╚═〘 FXC7 BOT 〙', members_id, true)
+					mentions(`╔══〘  *${body.slice(12)}*  〙✪══`+teks+'╚═〘 𝐌𝐞𝐠𝐮𝐦𝐢𝐧𝐁𝐎𝐓 〙', members_id, true)
 					break
 			    case 'kbbi':
 			    try {
