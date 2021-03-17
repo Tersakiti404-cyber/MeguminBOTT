@@ -13,12 +13,12 @@ align: 'left',
 gradient: ['magenta', 'red']
 })
 
-CFonts.say('----------------- FARHANXCODE7 -----------------', {
+CFonts.say('----------------- MeguminBOT4.8 -----------------', {
     font: 'console',
     align: 'center',
     gradient: ['red', 'yellow']
 })
-CFonts.say('Welcome In\nTermux Bot Wa', {
+CFonts.say('Welcome In\nMegumimBOT4.8', {
   font: 'chrome',
   align: 'center',
   gradient: ['red', 'magenta']
